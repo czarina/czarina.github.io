@@ -15,10 +15,10 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand">Commish [ALPHA VERSION]</a>
+          <a class="navbar-brand" href="index.html">Commish [ALPHA VERSION]</a>
         </div>
         <div class="collapse navbar-collapse" id="navbar-ex-collapse">
-          <ul class="lead nav navbar-nav navbar-right">
+          <ul class="nav navbar-nav navbar-right">
             <li class="active">
               <a href="#">Home</a>
             </li>
@@ -32,6 +32,12 @@
               <a href="#">Browse</a>
             </li>
           </ul>
+          <form class="navbar-form navbar-right" role="search" action="search.html">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Search" action="search.html">
+            </div>
+            <button type="submit" class="btn btn-default" action="search.html">Submit</button>
+          </form>
         </div>
       </div>
     </div>
@@ -41,11 +47,11 @@
           <div class="col-md-11">
             <h3>Melabrook's Shop &gt; Home</h3>
             <div class="btn-group">
-              <a href="#" class="btn btn-default">Home</a>
+              <a href="index.html" class="btn btn-default">Home</a>
               <a href="store_portfolio.html" class="btn btn-default">Commission Portfolio</a>
-              <a href="#" class="btn btn-default">Blog</a>
-              <a href="#" class="btn btn-default">Reviews</a>
-              <a href="#" class="btn btn-default">About Store</a>
+              <a href="store_feed.html" class="btn btn-default">Shop Feed</a>
+              <a href="store_reviews.html" class="btn btn-default">Reviews</a>
+              <a href="store_about.html" class="btn btn-default">About Store</a>
             </div>
           </div>
         </div>
@@ -59,18 +65,18 @@
           </div>
           <div class="col-md-6">
             <h1>Melabrook's Sketch Shop</h1>
-            <h4>@Melabrook &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-              &nbsp; &nbsp; &nbsp;30 Jobs Completed &nbsp;| Rating: 4.5 | &nbsp;80 Followers</h4>
+            <h4>84 Jobs Completed &nbsp;| Rating: 4.8 | 80 Followers</h4>
             <p>Hey guys, welcome to my &nbsp;Commish page! I like to draw cartoons and
               character art. &nbsp;Check out my stuff and feel free to send me a request
               ^_^
               <br>
-              <br>Tags: #characters, #girls, #sketchart, #cute, #adoptable</p>
+              <br>Tags:
+              <a href="search.html">#sketches</a>, #characterart, #sketchart, #cute, #adoptable</p>
           </div>
         </div>
       </div>
     </div>
-    <div class="section section-primary low-margin">
+    <div class="low-margin section section-primary">
       <div class="container">
         <div class="row">
           <div class="col-md-12 text-center">
@@ -79,18 +85,10 @@
         </div>
         <div class="row">
           <div class="col-md-4">
-            <h4 class="text-warning">Added WIP &nbsp;
+            <h4 class="text-success">Completed Job &nbsp;
               <small>
                 <font color="white">&nbsp;
                   <br>&nbsp;1 hour ago&nbsp;</font>
-              </small>
-            </h4>
-          </div>
-          <div class="col-md-4">
-            <h4 class="text-success">Completed Job &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
-              <small>
-                <br>
-                <font color="white">3 days ago&nbsp;</font>
               </small>
             </h4>
           </div>
@@ -102,29 +100,36 @@
               </small>
             </h4>
           </div>
+          <div class="col-md-4">
+            <h4 class="text-success">Completed Job &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
+              <small>
+                <br>
+                <font color="white">3 days ago&nbsp;</font>
+              </small>
+            </h4>
+          </div>
         </div>
-        <div class="row">
-          <div class="col-md-3">
-            <a href="test.html"><img src="images/melabrook_1_wip_req.png" class="img-responsive img-thumbnail"></a>
+        <div class="row text-left">
+          <div class="col-md-3 light-cell-border">
+            <a href="commission_log_1.html"><img src="images/melabrook_1_wip_req_wide.png" class="img-responsive img-thumbnail"></a>
             <h4>Colored Headshot for @Podestris</h4>
           </div>
           <div class="col-md-1"></div>
-          <div class="col-md-3">
+          <div class="col-md-3 light-cell-border">
+            <a href="commission_log_2.html"><img src="images/test.png" class="img-responsive img-thumbnail"></a>
+            <h4>Colored Headshot for @CandySix</h4>
+          </div>
+          <div class="col-md-1"></div>
+          <div class="col-md-3 light-cell-border">
             <img src="https://i.imgur.com/wFsPsYk.png" class="img-responsive img-thumbnail">
             <h4>Colored Headshot for @DeadUpon</h4>
           </div>
-          <div class="col-md-1"></div>
-          <div class="col-md-3">
-            <img src="images/melabrook_3_wip_req.png" class="img-responsive img-thumbnail">
-            <h4>B&amp;W Headshot for @CandySix</h4>
-          </div>
           <div class="col-md-1">
-            <a class="btn btn-info" href="store_portfolio.html" style="margin-top:60px;">See more</a>
+            <a class="btn btn-info" href="store_feed.html" style="margin-top:60px;">See all</a>
           </div>
         </div>
       </div>
     </div>
-    
     <div class="section">
       <div class="container">
         <div class="row">
@@ -133,33 +138,31 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-md-12">
-            <hr>
+          <div class="col-md-4 text-left">
+            <h3 class="bold">Character Portraits</h3>
           </div>
-        </div>
-        <div class="row blue">
-          <div class="col-md-4 text-left" style="background-color: rgb(173, 216, 230);">
-            <h3>Character Portraits</h3>
-          </div>
-          <div class="col-md-8" style="background-color: rgb(173, 216, 230);">
-            <h4 class="text-right text-success" contenteditable="true"><br>3 Slots Available</h4>
+          <div class="col-md-8">
+            <h4 class="text-right text-success">
+              <br>3 slots available, 1 slot taken</h4>
           </div>
         </div>
         <div class="row">
-          <div class="col-md-4">
-            <h4 class="text-center">Headshots: $5</h4>
-            <a href="#"><img src="images/melabrook_headshot.png" class="img-responsive"></a>
-            <p></p>
-          </div>
-          <div class="col-md-4">
-            <h4 class="text-center">Half-bodies: $10</h4>
-            <img src="images/melabrook_half-body.png" class="img-responsive">
-            <h5></h5>
-            <p></p>
-          </div>
-          <div class="col-md-4">
-            <h4 class="text-center">Full-bodies: $15</h4>
-            <img src="images/melabrook_full-body_copy.png" class="img-responsive">
+          <div class="col-md-11 centered">
+            <div class="col-md-3 light-cell-border">
+              <a href="commission_info.html"><img src="images/melabrook_headshot.png" class="img-responsive"></a>
+              <h4 class="text-center">Headshots: $5</h4>
+              <p></p>
+            </div>
+            <div class="col-md-3 col-md-offset-1 light-cell-border">
+              <a href="commission_info.html"><img src="images/melabrook_half-body-thumb.png" class="img-responsive"></a>
+              <h4 class="text-center">Half-bodies: $10</h4>
+              <h5></h5>
+              <p></p>
+            </div>
+            <div class="col-md-3 col-md-offset-1 light-cell-border">
+              <a href="commission_info.html"><img src="images/melabrook_fullbody_thumb.png" class="img-responsive"></a>
+              <h4 class="text-center">Full-bodies: $15</h4>
+            </div>
           </div>
         </div>
         <div class="row">
@@ -171,19 +174,20 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-md-6">
-            <a class="btn btn-block btn-lg btn-primary" href="store_portfolio.html">More Info</a>
+          <div class="col-md-3 col-md-offset-3">
+            <a class="btn btn-block btn-default btn-lg" href="commission_info.html">More Info</a>
           </div>
-          <div class="col-md-6">
+          <div class="col-md-3">
             <div class="row">
               <div class="col-md-12">
-                <a class="btn btn-block btn-lg btn-primary">Create Request</a>
+                <a class="btn btn-block btn-default btn-lg" href="create_request.html">Create Request</a>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div><div class="section">
+    </div>
+    <div class="section">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
@@ -194,17 +198,18 @@
           <div class="col-md-12">
             <ul class="media-list">
               <li class="media">
-                <a class="pull-left" href="#"><img class="media-object" src="images/melabrook_boyfriend.png" height="64" width="64"></a>
+                <a class="pull-left" href="#"><img class="media-object" src="images/square_icon.png" height="64" width="64"></a>
                 <div class="media-body">
                   <div class="row">
-                    <div class="col-md-9">
-                      <h4>Slot 1: Character Drawing (Headshot) for @MarySue &nbsp; &nbsp; &nbsp;
+                    <div class="col-md-10">
+                      <h4>Slot 1: Character Drawing (Headshot) for @Candysix &nbsp; &nbsp; &nbsp;
                         &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
                         &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                        &nbsp; Last updated: 1 hour ago</h4>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                        &nbsp; &nbsp; &nbsp; &nbsp;Last updated: 3 days ago</h4>
                     </div>
-                    <div class="col-md-3 text-center">
-                      <a class="btn btn-block btn-primary">View</a>
+                    <div class="col-md-2 text-center">
+                      <a class="btn btn-block btn-default" href="commission_log_2.html">View</a>
                     </div>
                   </div>
                 </div>

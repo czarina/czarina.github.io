@@ -5294,7 +5294,7 @@ a.list-group-item-danger.active:focus {
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
 }
 .panel-body {
-  padding: 15px;
+  padding: 5px;
 }
 .panel-heading {
   padding: 10px 15px;
@@ -5360,8 +5360,8 @@ a.list-group-item-danger.active:focus {
 .panel > .table caption,
 .panel > .table-responsive > .table caption,
 .panel > .panel-collapse > .table caption {
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 .panel > .table:first-child,
 .panel > .table-responsive:first-child > .table:first-child {
@@ -6776,17 +6776,6 @@ body {
   background-attachment: fixed;
 }
 /* PINGENDO COMMENT DO NOT REMOVE */
-.low-margin {
-  padding: 0px;
-}
 .no-padding {
   padding: 0px;
-}
-.light-cell-border {
-  border: 2px solid #d3d3d3;
-  border-radius: 10px;
-  padding: 0px;
-}
-.shadow {
-  border: 2px solid grey;
 }
