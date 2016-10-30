@@ -6798,3 +6798,19 @@ body {
 .light-grey {
   background: #d3d3d3;
 }
+.no-padding {
+  padding: 0px;
+}
+.no-nothing {
+  padding: 0px;
+  padding-left: 15px;
+  margin: 0px;
+}
+.bottom {
+  float: none;
+  width: auto;
+  display: table-cell;
+  padding: 0px;
+  margins: 0px;
+  vertical-align: bottom;
+}

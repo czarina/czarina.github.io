@@ -1,231 +1,267 @@
 <html><head>
-    <script type="text/javascript">
-      (function(e,a){if(!a.__SV){var b=window;try{var c,l,i,j=b.location,g=j.hash;c=function(a,b){return(l=a.match(RegExp(b+"=([^&]*)")))?l[1]:null};g&&c(g,"state")&&(i=JSON.parse(decodeURIComponent(c(g,"state"))),"mpeditor"===i.action&&(b.sessionStorage.setItem("_mpcehash",g),history.replaceState(i.desiredHash||"",e.title,j.pathname+j.search)))}catch(m){}var k,h;window.mixpanel=a;a._i=[];a.init=function(b,c,f){function e(b,a){var c=a.split(".");2==c.length&&(b=b[c[0]],a=c[1]);b[a]=function(){b.push([a].concat(Array.prototype.slice.call(arguments,
-      0)))}}var d=a;"undefined"!==typeof f?d=a[f]=[]:f="mixpanel";d.people=d.people||[];d.toString=function(b){var a="mixpanel";"mixpanel"!==f&&(a+="."+f);b||(a+=" (stub)");return a};d.people.toString=function(){return d.toString(1)+".people (stub)"};k="disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config reset people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
-      for(h=0;h<k.length;h++)e(d,k[h]);a._i.push([b,c,f])};a.__SV=1.2;b=e.createElement("script");b.type="text/javascript";b.async=!0;b.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";c=e.getElementsByTagName("script")[0];c.parentNode.insertBefore(b,c)}})(document,window.mixpanel||[]);
-      mixpanel.init("2a95cbb90753ac113ac55567b4c16a19");
-    </script>
-    <!-- end Mixpanel -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-    <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-    <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="index.css">
-  </head><body>
-    <div class="navbar navbar-default navbar-static-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="index.html">Commish [ALPHA VERSION]</a>
-        </div>
-        <div class="collapse navbar-collapse" id="navbar-ex-collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <li class="active">
-              <a href="index.html">Home</a>
-            </li>
-            <li>
-              <a href="artist_portal.html">Artist Portal</a>
-            </li>
-            <li>
-              <a href="#">My Account</a>
-            </li>
-            <li>
-              <a href="#">Browse</a>
-            </li>
-          </ul>
-          <form class="navbar-form navbar-right" role="search">
-            <div class="form-group">
-              <input type="text" class="form-control" placeholder="Search">
-            </div>
-            <button type="submit" class="btn btn-default">Submit</button>
-          </form>
-        </div>
-      </div>
-    </div>
-    <div class="section low-margin">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-11">
-            <h3>Melabrook's Shop &gt; Home</h3>
-            <div class="btn-group">
-              <a href="index.html" class="btn btn-default">Home</a>
-              <a href="store_portfolio.html" class="btn btn-default">Commission Portfolio</a>
-              <a href="store_feed.html" class="btn btn-default">Shop Feed</a>
-              <a href="store_reviews.html" class="btn btn-default">Reviews</a>
-              <a href="store_about.html" class="btn btn-default">About Store</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="section">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-            <img src="images/header.png" class="center-block img-responsive">
-          </div>
-          <div class="col-md-6">
-            <h1>Melabrook's Sketch Shop</h1>
-            <h4>84 Jobs Completed &nbsp;| Rating: 4.8 | 80 Followers</h4>
-            <p>Hey guys, welcome to my &nbsp;Commish page! I like to draw cartoons and
-              character art. &nbsp;Check out my stuff and feel free to send me a request
-              ^_^
-              <br>
-              <br>Tags:
-              <a href="search.html">#sketches</a>, #characterart, #sketchart, #cute, #adoptable</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="low-margin section section-primary">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 text-center">
-            <h3 class="text-center">Latest Updates</h3>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-4">
-            <h4 class="text-success">Completed Job &nbsp;
-              <small>
-                <font color="white">&nbsp;
-                  <br>&nbsp;1 hour ago&nbsp;</font>
-              </small>
-            </h4>
-          </div>
-          <div class="col-md-4">
-            <h4 class="text-warning">Added WIP &nbsp;
-              <small>&nbsp;
-                <br>
-                <font color="white">1 week ago&nbsp;</font>
-              </small>
-            </h4>
-          </div>
-          <div class="col-md-4">
-            <h4 class="text-success">Completed Job &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
-              <small>
-                <br>
-                <font color="white">3 days ago&nbsp;</font>
-              </small>
-            </h4>
-          </div>
-        </div>
-        <div class="row text-left">
-          <div class="col-md-3 light-cell-border">
-            <a href="commission_log_1.html"><img src="images/melabrook_1_wip_req_wide.png" class="img-responsive img-thumbnail"></a>
-            <h4>Colored Headshot for @Podestris</h4>
-          </div>
-          <div class="col-md-1"></div>
-          <div class="col-md-3 light-cell-border">
-            <a href="commission_log_2.html"><img src="images/test.png" class="img-responsive img-thumbnail"></a>
-            <h4>Colored Headshot for @CandySix</h4>
-          </div>
-          <div class="col-md-1"></div>
-          <div class="col-md-3 light-cell-border">
-            <img src="https://i.imgur.com/wFsPsYk.png" class="img-responsive img-thumbnail">
-            <h4>Colored Headshot for @DeadUpon</h4>
-          </div>
-          <div class="col-md-1">
-            <a class="btn btn-info" href="store_feed.html" style="margin-top:60px;">See all</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="section">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <h3 class="text-center">Commission Slots</h3>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-4 text-left">
-            <h3 class="bold">Character Portraits</h3>
-          </div>
-          <div class="col-md-8">
-            <h4 class="text-right text-success">
-              <br>3 slots available, 1 slot taken</h4>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-11 centered">
-            <div class="col-md-3 light-cell-border">
-              <a href="commission_info.html"><img src="images/melabrook_headshot.png" class="img-responsive"></a>
-              <h4 class="text-center">Headshots: $5</h4>
-              <p></p>
-            </div>
-            <div class="col-md-3 col-md-offset-1 light-cell-border">
-              <a href="commission_info.html"><img src="images/melabrook_half-body-thumb.png" class="img-responsive"></a>
-              <h4 class="text-center">Half-bodies: $10</h4>
-              <h5></h5>
-              <p></p>
-            </div>
-            <div class="col-md-3 col-md-offset-1 light-cell-border">
-              <a href="commission_info.html"><img src="images/melabrook_fullbody_thumb.png" class="img-responsive"></a>
-              <h4 class="text-center">Full-bodies: $15</h4>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12">
-            <h4 class="text-center">Simplified, button-eyed portraits, fully coloured, one character only.
-              <br>
-              <br>
-            </h4>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-3 col-md-offset-3">
-            <a class="btn btn-block btn-default btn-lg" href="commission_info.html">More Info</a>
-          </div>
-          <div class="col-md-3">
-            <div class="row">
-              <div class="col-md-12">
-                <a class="btn btn-block btn-default btn-lg" href="request_form.html">Create Request</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="section">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <h3 class="text-center" contenteditable="true">Active Jobs</h3>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12">
-            <ul class="media-list">
-              <li class="media">
-                <a class="pull-left" href="#"><img class="media-object" src="images/square_icon.png" height="64" width="64"></a>
-                <div class="media-body">
-                  <div class="row">
-                    <div class="col-md-10">
-                      <h4>Slot 1: Character Drawing (Headshot) for @Candysix &nbsp; &nbsp; &nbsp;
-                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                        &nbsp; &nbsp; &nbsp; &nbsp;Last updated: 3 days ago</h4>
-                    </div>
-                    <div class="col-md-2 text-center">
-                      <a class="btn btn-block btn-default" href="commission_log_2.html">View</a>
-                    </div>
-                  </div>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+        <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+        <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="index.css" rel="stylesheet" type="text/css">
+    </head><body>
+        <div class="navbar navbar-default navbar-static-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html">Commish [ALPHA VERSION]</a>
                 </div>
-              </li>
-              <li class="media"></li>
-            </ul>
-          </div>
+                <div class="collapse navbar-collapse" id="navbar-ex-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="artist_portal.html">Artist Portal</a>
+                        </li>
+                        <li>
+                            <a href="#">My Account</a>
+                        </li>
+                        <li>
+                            <a href="search.html">Browse</a>
+                        </li>
+                    </ul>
+                    <form class="navbar-form navbar-right" role="search" action="search.html">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search" action="search.html">
+                        </div>
+                        <button type="submit" class="btn btn-default" action="search.html">Submit</button>
+                    </form>
+                </div>
+            </div>
         </div>
-      </div>s</div>
-  
+        <div class="section no-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <img src="/Users/christinazou/Documents/czarina.github.io/images/Commish.png" class="center-block img-responsive">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 no-padding">
+                        <h3>Recently Completed Commissions</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section low-margin no-padding-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <a href="commission_log_1.html" class="" style="opacity: 0.5;"><img src="/Users/christinazou/Documents/czarina.github.io/images/front_melabrook.png" class="img-responsive"></a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="#" class="" style="opacity: 0.5;"><img src="/Users/christinazou/Documents/czarina.github.io/images/featured_2.png" class="img-responsive"></a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="#" class=""><img src="/Users/christinazou/Documents/czarina.github.io/images/featured_3.png" class="img-responsive"></a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="#" class=""><img src="/Users/christinazou/Documents/czarina.github.io/images/featured_4.jpg" class="img-responsive"></a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <h4>Cartoon Headshot&nbsp;
+                            <br>By @Melabrook&nbsp;for @Podestris
+                            <div< div=""></div<>
+                            <br>
+                            <a href="commission_log_1.html">(click me!)</a>
+                        </h4>
+                        <h4 class="no-padding text-success">Completed 1 hour ago</h4>
+                    </div>
+                    <div class="col-md-3">
+                        <h4>RWBY Fanart
+                            <br>By @Dishwasher1910 for @RvB
+                            <br>
+                        </h4>
+                        <h4 class="no-padding text-success">Completed 2 hours ago</h4>
+                    </div>
+                    <div class="col-md-3">
+                        <h4>Sylvari Mesmer
+                            <br>By @Worgrak for @Defora</h4>
+                        <h4 class="no-padding text-success">Completed 3 hours ago</h4>
+                    </div>
+                    <div class="col-md-3">
+                        <h4>YCH Auction
+                            <br>By @Nevaeh-Lee for @AmGrisi</h4>
+                        <h4 class="no-padding text-success">Completed 3 hours ago</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section no-padding">
+            <div class="container">
+                <div class="col-md-12 no-padding">
+                    <h3>Popular Commission Slots</h3>
+                </div>
+            </div>
+        </div>
+        <div class="section low-margin no-padding-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <a href="#" class="" style="opacity: 0.5;"><img src="/Users/christinazou/Documents/czarina.github.io/images/popular_1.png" class="img-responsive"></a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="#" class="" style="opacity: 0.5;"><img src="/Users/christinazou/Documents/czarina.github.io/images/popular_2.png" class="img-responsive"></a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="#" class=""><img src="/Users/christinazou/Documents/czarina.github.io/images/popular_3.jpg" class="img-responsive"></a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="#" class=""><img src="/Users/christinazou/Documents/czarina.github.io/images/popular_4.jpg" class="img-responsive"></a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <h4>Pony Drawings
+                            <br>By @Nevaeh-Lee</h4>
+                    </div>
+                    <div class="col-md-3">
+                        <h4>RWBY Drawings
+                            <br>By @Dishwaser1910</h4>
+                    </div>
+                    <div class="col-md-3">
+                        <h4>Chibis
+                            <br>By @Annabel-m</h4>
+                    </div>
+                    <div class="col-md-3">
+                        <h4>Watercolor Drawings
+                            <br>By @Mappiee</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section no-padding">
+            <div class="container">
+                <div class="col-md-12 no-padding">
+                    <h3 class="no-padding">Popular Tags</h3>
+                </div>
+            </div>
+        </div>
+        <div class="section low-margin no-padding-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h4>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                            &nbsp; &nbsp; &nbsp; &nbsp;
+                            <a href="search.html">#Chibi</a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                            &nbsp; &nbsp; &nbsp; &nbsp;
+                            <a href="search.html">#Halloween </a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                            <a href="search.html">#Overwatch </a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                            <a href="search.html">#YCH</a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                            &nbsp;</h4>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <a href="#" class="" style="opacity: 0.5;"><img src="/Users/christinazou/Documents/czarina.github.io/images/tag_1_fixed.jpg" class="img-responsive"></a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="#" class="" style="opacity: 0.5;"><img src="/Users/christinazou/Documents/czarina.github.io/images/tag_2.png" class="img-responsive"></a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="#" class=""><img src="/Users/christinazou/Documents/czarina.github.io/images/tag_3.png" class="img-responsive"></a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="#" class=""><img src="/Users/christinazou/Documents/czarina.github.io/images/featured_4.jpg" class="img-responsive"></a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <h4>Chibis
+                            <br>By @Miramele
+                            <div< div=""></div<>
+                        </h4>
+                    </div>
+                    <div class="col-md-3">
+                        <h4>Halloween Watercolors
+                            <br>By @Kutty-Sark</h4>
+                    </div>
+                    <div class="col-md-3">
+                        <h4>Overwatch Fanart
+                            <br>By @Juliichi</h4>
+                    </div>
+                    <div class="col-md-3">
+                        <h4>YCH Auctions
+                            <br>By @Nevaeh-lee</h4>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <h4>More tags:
+                            <a href="search.html">#anime</a>,
+                            <a href="search.html">#animals</a>,
+                            <a href="search.html">#OCs</a>,
+                            <a href="search.html">#charactersheet</a>,
+                            <a href="search.html">#characterdesign</a>
+                        </h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section no-padding">
+            <div class="container">
+                <div class="col-md-12 no-padding">
+                    <h3>New Commission Slots</h3>
+                </div>
+            </div>
+        </div>
+        <div class="section low-margin no-padding-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <a href="#" class="" style="opacity: 0.5;"><img src="/Users/christinazou/Documents/czarina.github.io/images/new_1.png" class="img-responsive"></a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="#" class="" style="opacity: 0.5;"><img src="/Users/christinazou/Documents/czarina.github.io/images/new_2.png" class="img-responsive"></a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="#" class=""><img src="/Users/christinazou/Documents/czarina.github.io/images/new_3.png" class="img-responsive"></a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="#" class=""><img src="/Users/christinazou/Documents/czarina.github.io/images/new_4.jpeg" class="img-responsive"></a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <h4>Pencil Drawings
+                            <br>By @MarshmallowDreamms</h4>
+                    </div>
+                    <div class="col-md-3">
+                        <h4>Anthro Sketches
+                            <br>By @Rasbii</h4>
+                    </div>
+                    <div class="col-md-3">
+                        <h4>Cartoons
+                            <br>by @SimplEagle</h4>
+                    </div>
+                    <div class="col-md-3">
+                        <h4>Character Sheets
+                            <div< div=""></div<>
+                            <br>by @Onisuu</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
 
 </body></html>
