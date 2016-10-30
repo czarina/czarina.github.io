@@ -1,0 +1,270 @@
+<html><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="artist_portal.css" rel="stylesheet" type="text/css">
+  </head><body>
+    <div class="navbar navbar-default navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">Commish [ALPHA VERSION]</a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-ex-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active">
+              <a href="index.html">Home</a>
+            </li>
+            <li>
+              <a href="artist_portal.html">Artist Portal</a>
+            </li>
+            <li>
+              <a href="#">My Account</a>
+            </li>
+            <li>
+              <a href="#">Browse</a>
+            </li>
+          </ul>
+          <form class="navbar-form navbar-right" role="search">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Search">
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="section low-margin no-padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-11">
+            <h3>Artist Portal &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+              <br>
+            </h3>
+            <div class="btn-group">
+              <a href="artist_portal.html" class="btn btn-default" contenteditable="true">My Orders</a>
+              <a href="artist_portal_shop.html" class="btn btn-default">My Shop</a>
+              <a href="artist_portal_payments.html" class="btn btn-default">Payments</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section no-padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1 class="text-center">My Orders</h1>
+            <h3>Summary</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3 text-right no-padding">
+            <h5 class="text-right">New requests:&nbsp;
+              <br>
+              <br>
+              <br>
+              <br>Active jobs:
+              <br>
+              <br>&nbsp; &nbsp; &nbsp; &nbsp; Next deadline:
+              <br>
+              <br>Completed Jobs</h5>
+          </div>
+          <div class="col-md-5">
+            <h5 class="text-left">Colored Full-body for @ABCUser, sent Oct. 14
+              <a href="#">(See more)</a>
+              <br>B&amp;W Headshot for @DEFUser, sent Oct. 4
+              <a href="#">(See more)</a>
+              <br>Colored Headshot for @GHIUser, sent Oct. 3
+              <a href="#">(See more)</a>
+              <br>
+              <br>Colored Headshot for @Podestris, due Oct. 30
+              <a href="commission_log_1.html">(See more)</a>
+              <br>
+              <br>Oct 30 (2 days) - @Podestris's request is due
+              <a href="commission_log_1.html">(See more)</a>
+              <br>
+              <br>84</h5>
+          </div>
+          <div class="col-md-4 text-left"></div>
+        </div>
+      </div>
+    </div>
+    <div class="section no-padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-5">
+            <div class="col-md-9 col-md-no-padding">
+              <h3 class="no-padding">Order Tracker: List View</h3>
+            </div>
+          </div>
+          <div class="col-md-7">
+            <p></p>
+            <div class="btn-group col-md-5 col-md-offset-5 text-right">
+              <a href="artist_portal.html" class="active btn btn-default" contenteditable="true">List View</a>
+              <a href="artist_portal_calendar.html" class="btn btn-default">Calendar View</a>
+            </div>
+            <div class="btn-group col-md-2 no-padding text-right">
+              <a class="btn btn-default dropdown-toggle" data-toggle="dropdown"> Sort By <span class="fa fa-caret-down"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li>
+                  <a href="#">Latest Update</a>
+                </li>
+                <li>
+                  <a href="#">Deadline</a>
+                </li>
+                <li>
+                  <a href="#">Start Date</a>
+                </li>
+                <li>
+                  <a href="#">Status</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="section no-padding">
+          <div class="container">
+            <div class="col-md-12">
+              <table class="table table-bordered table-hover table-striped" style="font-size:12px;">
+                <thead>
+                  <tr>
+                    <th>Thumbnail</th>
+                    <th>Status</th>
+                    <th>Client</th>
+                    <th>Start Date</th>
+                    <th>Due Date</th>
+                    <th>Latest Update</th>
+                    <th>Cost</th>
+                    <th>Last Update</th>
+                    <th>Alerts</th>
+                    <th>Go to Request</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <a href="commission_log_2.html"><img src="images/melabrook_4_wip_req.png" alt="" border="3" height="100" width="100"></a>
+                    </td>
+                    <td class="warning">In Progress</td>
+                    <td>@CandySix</td>
+                    <td>Sept. 1
+                      <br>
+                    </td>
+                    <td>Oct. 30&nbsp;
+                      <br>
+                    </td>
+                    <td>1 day ago</td>
+                    <td>$10</td>
+                    <td>@Melabrook:
+                      <br>I just finished the line-art. Let me know what you think?</td>
+                    <td>
+                      <font color="red">2 days&nbsp;until project deadline!</font>
+                    </td>
+                    <td>
+                      <a href="commission_log_2.html">Click here</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="commission_log_1.html"><img src="images/melabrook_1_wipereq_sq.png" alt="" border="3" height="100" width="100"></a>
+                    </td>
+                    <td>Completed</td>
+                    <td>@Podestris</td>
+                    <td>Sept. 18
+                      <br>
+                    </td>
+                    <td>Oct. 27</td>
+                    <td>3 days ago</td>
+                    <td>$15</td>
+                    <td>@Melabrook:
+                      <br>Of course, I took it off! Here's the finished work, I hope you like ...</td>
+                    <td></td>
+                    <td>
+                      <a href="commission_log_1.html">Click here</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="#"><img src="images/melabrook_2_wip_req_sq.png" alt="" border="3" height="100" width="100"></a>
+                    </td>
+                    <td>Completed</td>
+                    <td>@DeadUpon</td>
+                    <td>Aug. 29</td>
+                    <td>Oct. 26</td>
+                    <td>3 days ago</td>
+                    <td>$10</td>
+                    <td>@DeadUpon:
+                      <br>OMG I love it! Thanks :D I'll write you a review in the next few days.</td>
+                    <td>@DeadUpon has not written a review for this order.</td>
+                    <td>
+                      <a href="#">Click here</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td class="warning">New Request</td>
+                    <td>@ABCUser</td>
+                    <td>
+                      <br>
+                    </td>
+                    <td></td>
+                    <td>7 days</td>
+                    <td>$15</td>
+                    <td>
+                      <i>@ABCUser has reqested a Character Drawing: Full-body.</i>
+                    </td>
+                    <td>
+                      <font color="red">@ABCUser's request is 7 days old!</font>
+                    </td>
+                    <td>
+                      <a href="#">Click here</a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="row">
+                <div class="col-md-12 text-center">
+                  <ul class="pagination">
+                    <li>
+                      <a href="#">Prev</a>
+                    </li>
+                    <li>
+                      <a href="#">1</a>
+                    </li>
+                    <li>
+                      <a href="#">2</a>
+                    </li>
+                    <li>
+                      <a href="#">3</a>
+                    </li>
+                    <li>
+                      <a href="#">4</a>
+                    </li>
+                    <li>
+                      <a href="#">5</a>
+                    </li>
+                    <li>
+                      <a href="#">Next</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+
+</body></html>
