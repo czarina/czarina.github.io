@@ -6779,10 +6779,3 @@ body {
 .no-padding {
   padding: 0px;
 }
-.no-padding-top {
-  padding-top: 0px;
-  padding-bottom: 4px;
-}
-.extra-padding {
-  padding: 20px;
-}

@@ -6776,13 +6776,27 @@ body {
   background-attachment: fixed;
 }
 /* PINGENDO COMMENT DO NOT REMOVE */
-.no-padding {
+.low-margin {
+  padding: 0px;
+  margin: 0px;
+}
+.centered {
+  float: none;
+  margin: 0 auto;
+}
+.blue {
+  background: #337CBB;
+}
+.border {
+  border-bottom: 2px solid black;
+}
+.light-cell-border {
+  border: 2px solid #d3d3d3;
+  border-radius: 10px;
   padding: 0px;
 }
-.no-padding-top {
-  padding-top: 0px;
-  padding-bottom: 4px;
-}
-.extra-padding {
-  padding: 20px;
+.vcenter {
+  display: inline-block;
+  vertical-align: middle;
+  float: none;
 }

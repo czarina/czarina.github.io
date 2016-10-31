@@ -1,0 +1,247 @@
+<html><head>
+<script type="text/javascript">
+      (function(e,a){if(!a.__SV){var b=window;try{var c,l,i,j=b.location,g=j.hash;c=function(a,b){return(l=a.match(RegExp(b+"=([^&]*)")))?l[1]:null};g&&c(g,"state")&&(i=JSON.parse(decodeURIComponent(c(g,"state"))),"mpeditor"===i.action&&(b.sessionStorage.setItem("_mpcehash",g),history.replaceState(i.desiredHash||"",e.title,j.pathname+j.search)))}catch(m){}var k,h;window.mixpanel=a;a._i=[];a.init=function(b,c,f){function e(b,a){var c=a.split(".");2==c.length&&(b=b[c[0]],a=c[1]);b[a]=function(){b.push([a].concat(Array.prototype.slice.call(arguments,
+              0)))}}var d=a;"undefined"!==typeof f?d=a[f]=[]:f="mixpanel";d.people=d.people||[];d.toString=function(b){var a="mixpanel";"mixpanel"!==f&&(a+="."+f);b||(a+=" (stub)");return a};d.people.toString=function(){return d.toString(1)+".people (stub)"};k="disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config reset people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
+              for(h=0;h<k.length;h++)e(d,k[h]);a._i.push([b,c,f])};a.__SV=1.2;b=e.createElement("script");b.type="text/javascript";b.async=!0;b.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";c=e.getElementsByTagName("script")[0];c.parentNode.insertBefore(b,c)}})(document,window.mixpanel||[]);
+              mixpanel.init("2a95cbb90753ac113ac55567b4c16a19");
+    </script>
+    <!-- end Mixpanel -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="artist_portal_calendar.css" rel="stylesheet" type="text/css">
+  </head><body>
+  <script type="text/javascript">
+    mixpanel.track("Artist portal - calendar");
+</script>
+    <div class="navbar navbar-default navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">Commish [ALPHA VERSION]</a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-ex-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+            <li>
+              <a href="artist_portal.html">Artist Portal</a>
+            </li>
+            <li>
+              <a href="#">My Account</a>
+            </li>
+            <li>
+              <a href="search.html">Browse</a>
+            </li>
+          </ul>
+          <form class="navbar-form navbar-right" role="search" action="search.html">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Search" action="search.html">
+            </div>
+            <button type="submit" class="btn btn-default" action="search.html">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="section low-margin no-padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-11">
+            <h3>Artist Portal &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+              <br>
+            </h3>
+            <div class="btn-group">
+              <a href="artist_portal.html" class="btn btn-default" contenteditable="true">My Orders</a>
+              <a href="#" class="btn btn-default">My Shop</a>
+              <a href="#" class="btn btn-default">Payments</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section no-padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1 class="text-center">My Orders</h1>
+            <h3>Summary</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3 text-right no-padding">
+            <h5 class="text-right">New requests:&nbsp;
+              <br>
+              <br>
+              <br>
+              <br>Active jobs:
+              <br>
+              <br>&nbsp; &nbsp; &nbsp; &nbsp; Next deadline:
+              <br>
+              <br>Completed Jobs</h5>
+          </div>
+          <div class="col-md-5">
+            <h5 class="text-left" contenteditable="true">Colored Full-body for @ABCUser, sent Oct. 14
+              <a href="#">(See more)</a>
+              <br>B&amp;W Headshot for @DEFUser, sent Oct. 4
+              <a href="#">(See more)</a>
+              <br>Colored Headshot for @GHIUser, sent Oct. 3
+              <a href="#">(See more)</a>
+              <br>
+              <br>Colored Headshot for @Podestris, due Oct. 30
+              <a href="commission_log_1.html">(See more)</a>
+              <br>
+              <br>Oct 30 (2 days) - @Podestris's request is due
+              <a href="commission_log_1.html">(See more)</a>
+              <br>
+              <br>84</h5>
+          </div>
+          <div class="col-md-4 text-left"></div>
+        </div>
+      </div>
+    </div>
+    <div class="section no-padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-5">
+            <div class="col-md-10 col-md-no-padding">
+              <h3 class="no-padding">Order Tracker: Calendar View</h3>
+            </div>
+          </div>
+          <div class="col-md-7">
+            <p></p>
+            <div class="btn-group col-md-5 col-md-offset-5 text-right">
+              <a href="artist_portal.html" class="btn btn-default" contenteditable="true">List View</a>
+              <a href="artist_portal_calendar.html" class="active btn btn-default">Calendar View</a>
+            </div>
+            <div class="btn-group col-md-2 no-padding text-right">
+              <a class="btn btn-default dropdown-toggle" data-toggle="dropdown"> Filter By <span class="fa fa-caret-down"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li>
+                  <a href="#">Active Projects</a>
+                </li>
+                <li>
+                  <a href="#">All Projects</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="section no-padding">
+          <div class="container">
+            <div class="col-md-12">
+              <h4 class="text-center">October 2016</h4>
+              <table class="table table-bordered text-right" style="table-layout: fixed; width: 100%; ">
+                <thead>
+                  <tr>
+                    <td></td>
+                    <td>1&nbsp;
+                      <br>WIP due for @userA
+                      <a href="#">(more)</a>
+                    </td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>7
+                      <br>
+                      <br>
+                      <br>
+                    </td>
+                    <td>8</td>
+                    <td>9</td>
+                    <td>10</td>
+                    <td>11</td>
+                    <td>12</td>
+                    <td>13</td>
+                  </tr>
+                  <tr>
+                    <td>14
+                      <br>WIP due for @Podestris
+                      <a href="#">(more)</a>
+                    </td>
+                    <td>15</td>
+                    <td>16</td>
+                    <td>17</td>
+                    <td>18</td>
+                    <td>19</td>
+                    <td>20
+                      <br>WIP due for @DeadUpon
+                      <a href="#">(more)</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>21
+                      <br>
+                      <br>
+                      <br>
+                    </td>
+                    <td>22</td>
+                    <td>23</td>
+                    <td>24</td>
+                    <td>25</td>
+                    <td>26
+                      <br>Job due for @DeadUpon
+                      <a href="#">(See more)</a>
+                    </td>
+                    <td>27
+                      <br>Job due for @Podestris
+                      <a href="commission_log_1.html">(See more)</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>28
+                      <br>WIP due for @CandySix
+                      <a href="commission_log_2.html">(more)</a>
+                    </td>
+                    <td>29</td>
+                    <td>30
+                      <br>Job due for @CandySix
+                      <a href="commission_log_2.html">(more)</a>
+                    </td>
+                    <td>31</td>
+                    <td>
+                      <font color="grey">1</font>
+                    </td>
+                    <td>
+                      <font color="grey">2</font>
+                    </td>
+                    <td>
+                      <font color="grey">3</font>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="col-md-12 text-center">
+                <ul class="pagination">
+                  <li>
+                    <a href="#">Previous Month</a>
+                  </li>
+                  <li>
+                    <a href="#">Next Month</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+
+</body></html>
