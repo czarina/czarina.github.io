@@ -6783,3 +6783,6 @@ body {
   padding-top: 0px;
   padding-bottom: 4px;
 }
+.extra-padding {
+  padding: 20px;
+}
