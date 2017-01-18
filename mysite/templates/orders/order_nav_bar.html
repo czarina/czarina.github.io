@@ -1,0 +1,46 @@
+<div class="section no-padding">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-md-2 col-md-offset-3 no-padding">
+        <p>
+          <br>
+          <br>
+        </p>
+        <ul class="pager no-nothing">
+        {% if prev_order %}
+          <li class="previous no-nothing">
+            <a href={{prev_order}}>← Previous Commission</a>
+          </li>
+        {% else %}
+          <li class="previous no-padding disabled">
+            <a href="#">← Previous Commission</a>
+          </li>
+        {% endif %}
+        </ul>
+      </div>
+      <div class="col-md-5">
+        <h3 class="text-center">{{order.product.title}} by <a href="store_front.html">@{{order.artist}}</a>
+          <br>for
+          <a href="#">@{{order.customer}}</a>&nbsp;[{{order.status}}]</h3>
+      </div>
+      <div class="col-md-2 no-padding">
+        <p>
+          <br>
+          <br>
+        </p>
+        <ul class="pager no-nothing">
+          {% if next_order %}
+          <li class="next no-nothing">
+            <a href={{next_order}}>Next Commission  →</a>
+          </li>
+          {% else %}
+           <li class="next no-nothing disabled">
+            <a href="#">Next Commission  →</a>
+          </li>
+          {% endif %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

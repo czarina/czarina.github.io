@@ -1,0 +1,18 @@
+<script type="text/javascript">
+    function replaceQueryParam(param, newval, search) {
+      var regex = new RegExp("([?;&])" + param + "[^&;]*[;&]?");
+      var query = search.replace(regex, "$1").replace(/&$/, '');
+
+      if (newval != '') {
+        return (query.length > 2 ? query + "&" : "?") + (newval ? param + "=" + newval : '');
+      }
+      
+      return query;
+    }
+
+    function textQuery(paramToChange, elementName) {
+        window.location.href = '/search/' + replaceQueryParam(paramToChange, document.getElementById(elementName).value, window.location.search);
+        return false;
+      };
+
+</script>

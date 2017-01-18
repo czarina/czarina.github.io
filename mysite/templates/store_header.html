@@ -1,0 +1,17 @@
+<div class="section low-margin low-padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-11">
+            <h3>
+              <a href='{% url "store" id %}'>{{store.owner}}'s Shop</a>&gt; {{subheader}} </h3>
+            <div class="btn-group">
+              <a href='{% url "store" id %}' class="btn btn-default">Home</a>
+              <a href='{% url "store_portfolio" id %}'class="btn btn-default">Commission Portfolio</a>
+              <a href='{% url "store_feed" id %}' class="btn btn-default">Shop Feed</a>
+              <a href='{% url "store_reviews" id %}' class="btn btn-default">Reviews</a>
+              <a href='{% url "store_about" id %}' class="btn btn-default">About Store</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>

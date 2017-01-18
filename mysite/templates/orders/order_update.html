@@ -1,0 +1,27 @@
+<div class="panel panel-default">
+    <div class="panel panel-default ">
+        <div class="panel-body low-padding" style="background-color:#f5f5f5; ">
+             <div class="row"> 
+            <div class = "col-md-9"> <b>@{{author}}, <i>{{update.update_type}}</b></i>
+            </div>
+            <div class="col-md-3" style = "text-align: right"> {{update.created_at}}
+            </div>
+        </div>
+        </div>
+    </div>
+    <p>&nbsp; &nbsp; &nbsp; &nbsp;{{update.text}}</p>
+
+    {% if images %}
+    <div class="panel-body">
+        <div class="row"> <div class="col-md-12"><i> Attachments </i></div></div>
+        <div class="row"> 
+        {% for image in images %}
+        <div class="col-md-2">
+            <a href="commission_log_1.html"><img src="/{{STATIC_ROOT}}{{image.image}}" class="img-responsive"></a>
+        </div>
+        {% endfor %}    
+    </div>
+    </div>
+
+    {% endif %}
+</div>

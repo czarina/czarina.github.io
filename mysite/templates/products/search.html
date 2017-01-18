@@ -1,0 +1,286 @@
+<html><head>
+<script type="text/javascript">
+    function replaceQueryParam(param, newval, search) {
+      var regex = new RegExp("([?;&])" + param + "[^&;]*[;&]?");
+      var query = search.replace(regex, "$1").replace(/&$/, '');
+
+      if (newval != '') {
+        return (query.length > 2 ? query + "&" : "?") + (newval ? param + "=" + newval : '');
+      }
+      
+      return query;
+    }
+
+    function setSearchOptionValues(paramToChange, values) {
+      options = document.getElementById(paramToChange).options;
+      for (i = 0; i < values.length; i++) { 
+          var new_location = '/search/' + replaceQueryParam(paramToChange, values[i], window.location.search);   
+          options[i].value = new_location;   
+      }
+    }
+
+    function textQuery(paramToChange, elementName) {
+        window.location.href = '/search/' + replaceQueryParam(paramToChange, document.getElementById(elementName).value, window.location.search);
+        return false;
+      };
+
+    window.onload = function() {
+      //set order-by links
+      setSearchOptionValues('order_by', ['', 'popular', 'new']);
+
+      // set category links
+      var categories = ['']
+      {% for category in categories %}
+        categories.push("{{category.title}}");
+      {% endfor %}
+      setSearchOptionValues('category', categories);
+
+      // set fandom links
+      var fandoms = ['']
+      {% for fandom in fandoms %}
+        fandoms.push("{{fandom.title}}");
+      {% endfor %}
+      setSearchOptionValues('fandom', fandoms);
+
+      // set 'Search for' links
+      document.getElementById('search_for_commissions').value = '/search/' + replaceQueryParam('search_for', 'commission', window.location.search);   
+      document.getElementById('search_for_orders').value = '/search/' + replaceQueryParam('search_for', 'order', window.location.search);  
+      document.getElementById('search_for_stores').value = '/search/' + replaceQueryParam('search_for', 'store', window.location.search);  
+      document.getElementById('search_for_artists').value = '/search/' + replaceQueryParam('search_for', 'artist', window.location.search);  
+    
+    };
+
+    </script>
+    <!-- end Mixpanel -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+     {% load static %}
+    <link href=" {% static "css/index.css" %}" rel="stylesheet" type="text/css">
+  </head><body>
+      <div class="navbar navbar-default navbar-static-top">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="#" class="pull-left" href="/"><img src="/static/images/Commish_trans.png" height="50"></a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-ex-collapse">
+              <ul class="nav navbar-nav navbar-right">
+                <li>
+                  <a href="/artist_portal.html">Artist Portal</a>
+                </li>
+                <li>
+                  <a href="{% url 'social:begin' 'facebook' %}">Login with Facebook</a>
+                </li>
+                <li>
+                  <a href={% url 'search' %}>Browse</a>
+                </li>
+              </ul>
+               <form class="navbar-form navbar-right" role="form" onsubmit="return textQuery('query', 'search2');" method ="post">
+                {% csrf_token %}
+                Search:
+                <div class="form-group">
+                  <input type="text" id = "search2" {% if query %} value={{query}} {% endif %}>
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+    <div class="section no-padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="row">
+              <div class="col-md-3"></div>
+              <div class="col-md-9">
+                <div class="row">
+                  <div class="row">
+                    <div class="col-md-9">
+                      <h3>&nbsp; &nbsp;Search Results &gt; '{{query}}'</h3>
+                    </div>
+                    <div class="col-md-3">
+                          <p></p>
+                          <h4>
+                           <br>
+                              <select style="font-size: 12" name = "order_by" id = "order_by" onChange="javascript:location.href=this.value;">
+                                <option value=''>Sort by</option>
+                                <option {% if order_by == "popular" %} selected {% endif %}>Sort by: Popular</option>
+                                <option {% if order_by == "new" %} selected {% endif %}>Sort by: New</option>
+                            </select>
+                         
+                          </h4>
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row no-padding ">
+              <div class="col-md-3 " style="border-right: 2px solid grey; background-color: #e8e8ee;">
+                <h4>Search for ...</h4>
+                <form class="form-horizontal no-padding text-left">
+                  <div class="form-group no-padding">
+                    <div class="col-sm-1"></div>
+                    <div class="col-sm-11">
+                      <div class="radio">
+                        <label class="radio">
+                          <input type="radio" id="search_for_commissions" onChange="javascript:location.href=this.value" {% if search_for == "commission" %} checked {% endif %}>Commission slots</label>
+                        <label class="radio">
+                           <input type="radio" id="search_for_orders" onChange="javascript:location.href=this.value" {% if search_for == "order" %} checked {% endif %}>Past orders</label>
+                        <label class="radio">
+                          <input type="radio" id="search_for_stores" onChange="javascript:location.href=this.value" {% if search_for == "store" %} checked {% endif %}>Stores</label>
+                        <label class="radio">
+                          <input type="radio" id="search_for_artists" onChange="javascript:location.href=this.value" {% if search_for == "artist" %} checked {% endif %}>Artists</label>
+                        </div>
+                    </div>
+                  </div>
+                </form>
+                <hr style="border-color: black;">
+                Category: 
+                 <select style="font-size: 12" name="category" id="category" onChange="javascript:location.href=this.value;">
+                     <option value=''>All</option>
+                    {% for currCategory in categories %}
+                       <option {% if category == currCategory.title %} selected {% endif %}>{{currCategory.title}}</option>
+                    {% endfor %}
+                </select>
+                <br>
+                 Fandom: 
+                <select style="font-size: 12" name="fandom" id="fandom" onChange="javascript:location.href=this.value;">
+                     <option value=''>All</option>
+                    {% for currFandom in fandoms %}
+                      <option {% if fandom == currFandom.title %} selected {% endif %}>{{currFandom.title}}</option>
+                    {% endfor %}
+                </select>
+                <form class="form-horizontal" role="form" onsubmit="return textQuery('priceMin', 'priceMin');">
+                  <div class="form-group">
+                    <div class="col-sm-3 no-padding">
+                      <label class="control-label">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Min Price: $</label>
+                    </div>
+                    <div class="col-sm-2 no-padding">
+                      <input type="text" class="form-control" id = "priceMin" {% if priceMin %} value={{priceMin}} {% endif %}>
+                    </div>
+                  </div>
+                </form>
+                <form class="form-horizontal" role="form" onsubmit="return textQuery('priceMax', 'priceMax');">
+                  <div class="form-group">
+                    <div class="col-sm-3 no-padding">
+                      <label for="inputEmail" class="control-label">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Max Price: $</label>
+                    </div>
+                    <div class="col-sm-2 no-padding">
+                      <input type="text" class="form-control" id="priceMax" {% if priceMax %} value={{priceMax}} {% endif %}>
+                    </div>
+                  </div>
+                </form>
+                <div class="form-group">
+                  <div class="col-sm-5 no-padding">
+                    <label class="control-label">&nbsp; &nbsp; Rating:</label>
+                  </div>
+                  <div class="col-sm-7 no-padding">
+                    <select class="form-control">
+                      <option>Select</option>
+                      <option>&gt;4 stars</option>
+                      <option>&gt;3 stars</option>
+                      <option>&gt;2 stars</option>
+                      <option>&gt;1 stars</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="col-sm-5 no-padding">
+                    <label class="control-label">&nbsp; &nbsp; Turn-around:</label>
+                  </div>
+                  <div class="col-sm-7 no-padding">
+                    <select class="form-control">
+                      <option>Select</option>
+                      <option>&lt; 1 week</option>
+                      <option>&lt; 2 weeks</option>
+                      <option>&lt; 1 month</option>
+                      <option>&lt; 2 months</option>
+                    </select>
+                  </div>
+                </div>
+                <form class="form-horizontal" role="form">
+                  <div class="form-group">
+                    <div class="col-sm-offset-1 col-sm-10 no-padding">
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox">Open commission slots &nbsp;only</label>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+                <row></row>
+              </div>
+              <div class="col-md-9">
+                <div class="row">
+
+
+                  {% for result in results %}
+                    <div class="col-md-3">
+                      <h4>{{result.title}}</h4>
+                      <a href='{{ result.get_absolute_url }}'class=""><img src="/{{STATIC_ROOT}}{{result.cover_image}}" class="img-responsive"></a>
+                    </div>
+                  {% endfor %}
+                 <!--<div class="col-md-3">
+                    <h4>RWBY Fanart
+                      <br>By @Dishwasher1910&nbsp;
+                      <br>
+                    </h4>
+                  </div>
+                  <div class="col-md-3">
+                    <h4>Guild Wars Fanart &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;By @Worgrak&nbsp;</h4>
+                  </div>
+                  <div class="col-md-3">
+                    <h4>YCH Auctions
+                      <br>By @Nevaeh-Lee</h4>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-3">
+                    <a href="commission_log_1.html" class="" style="opacity: 0.5;"><img src="images/new_2.png" class="img-responsive"></a>
+                  </div>
+                  <div class="col-md-3">
+                    <a href="#" class=""><img src="images/popular_4.jpg" class="img-responsive"></a>
+                  </div>
+                  <div class="col-md-3">
+                    <a href="#" class=""><img src="images/new_3.png" class="img-responsive"></a>
+                  </div>
+                  <div class="col-md-3">
+                    <a href="#" class=""><img src="images/popular_1.png" class="img-responsive"></a>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-3">
+                    <h4>Anthro Sketches &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; By @Rasbii</h4>
+                  </div>
+                  <div class="col-md-3">
+                    <h4>Watercolor Drawings
+                      <br>By @Mappiee</h4>
+                  </div>
+                  <div class="col-md-3">
+                    <h4>Cartoons
+                      <br>By @SimplEagle</h4>
+                  </div>
+                  <div class="col-md-3">
+                    <h4>Pony drawings&nbsp;
+                      <br>By @Nevaeh-Lee</h4>
+                  </div>
+                </div>-->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+
+</body></html>

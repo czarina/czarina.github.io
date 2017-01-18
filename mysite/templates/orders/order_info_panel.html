@@ -1,0 +1,31 @@
+
+  <img src="/{{STATIC_ROOT}}{{order.cover_image}}" class="img-responsive">
+  <a class="btn btn-block btn-default" href="request_form.html">+ Create similar request</a>
+  <h3>
+    Order Details
+  </h3>
+  <p>Requester:
+    <a href="index.html">@{{order.customer}}</a>
+    <br>Type of commission:
+    <a href="commission_info.html">{{order.product.title}}</a>&nbsp;
+    <br>Request date: {{order.start_date}}
+    <br>Duration: {% if order.complete_date %} {{ order.start_date|timesince:order.complete_date }}  {% else %} {{ order.start_date|timesince }} {% endif %} 
+    <br>Status: {{order.status}}
+    <br>Total cost: ${{order.price}}</p>
+      <p>Add-ons: {% if add_ons %} {% for add_on in add_ons %} {{add_on}}, {% endfor %} {% else %} None {% endif %}
+    <br>
+    <br>Other notes: {{order.extra_notes}}
+  <h3>
+    Review
+  </h3>
+  <p>Overall: {{review.rating}}
+    <br>
+    <br>Quality: {{review.rating_quality}} 
+    <br>Communication: {{review.rating_communication}}  
+    <br>Professionalism: {{review.rating_professionalism}}  
+    <br>Timeliness: {{review.rating_timeliness}}  
+    <br>
+    <br>
+    <i>{{review.text}}</i>
+  </p>
+

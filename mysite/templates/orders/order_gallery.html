@@ -1,0 +1,13 @@
+<div class="row">
+  <br>
+  <div class="col-md-12">
+    <div class="row">
+      {% for image in order.updateimage_set.all %}
+      <div class="col-md-3">
+        <img src="/{{STATIC_ROOT}}{{image.image}}" class="img-responsive">
+        {{image.image_type}}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>

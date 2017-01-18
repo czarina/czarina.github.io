@@ -1,0 +1,81 @@
+<!-- browse section -->
+
+<div class="section low-margin no-padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="row">
+              <div class="col-md-11">
+                <h3 contenteditable="true">{{sectionTitle}}</h3>
+              </div>
+              <div class="col-md-1 no-padding">
+                <p></p>
+                <!--<form action="/s/" method="post">
+                   {% csrf_token %}
+                    <input id="submit" type="button" value="See more" />
+                </form>-->
+                <a class="btn btn-default" href="{% url 'search' %}?search_for={{searchFor}}&order_by={{orderBy}}" >See more</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section low-margin no-padding-top">
+      <div class="container">
+          {% if objectType == "tag" %}
+             <div class="row">
+              <div class="col-md-12">
+                
+                {% for tag in tags %}
+                 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                    &nbsp; &nbsp; &nbsp; &nbsp;
+                    <a href="#">#{{tag.title}}</a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                {% endfor %}
+               
+              </div>
+            </div>
+          {% endif %}
+        <div class="row">
+          {% for result in results %}
+            <div class="col-md-3">
+              <a href='{{ result.get_absolute_url }}' class="" style="opacity: 0.5;"><img src="/{{STATIC_ROOT}}{{result.cover_image}}" class="img-responsive"></a>
+            </div>
+          {% endfor %}
+        </div>
+        <div class="row">
+          {% for result in results %}
+            <div class="col-md-3">
+              {{result.title}}&nbsp;
+                {% if objectType == "order" %}
+                  <br>By @{{result.artist}}&nbsp;
+                {% else %}
+                  <br>By @{{result.owner}}&nbsp;
+                {% endif %}
+                <br>
+             
+              {% if objectType == "order" %}
+                <h5 class="no-padding text-success">{{result.status}} at {{result.updated}}</h5>
+              {% endif %}
+               {% if objectType == "new commission" %}
+                <h5 class="no-padding text-success">Added at {{result.created_at}}</h5>
+              {% endif %}
+            </div>
+          {% endfor %}
+        </div>
+         {% if objectType == "tag" %}
+                <div class="row">
+                  <div class="col-md-12">
+                    More tags:
+                      <a href="search.html">#anime</a>,
+                      <a href="search.html">#animals</a>,
+                      <a href="search.html">#OCs</a>,
+                      <a href="search.html">#charactersheet</a>,
+                      <a href="search.html">#characterdesign</a>
+                    
+                  </div>
+                </div>
+              {% endif %}
+      </div>
+    </div>
